@@ -1,6 +1,15 @@
-function Button() {
+type ButtonProps = {
+    text: string;
+    onClick: () => void;
+    variant?: "primary" | "secondary"| "danger";
+    disabled?: boolean;
+};
+
+function Button({text, onClick, variant, disabled = false}: ButtonProps) {
   return (
-    <div>Button</div>
+    <button onClick={onClick} className={`btn btn-${variant}`} disabled={disabled}>
+      {text}
+    </button>
   )
 }
 
