@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://jsonplaceholder.typicode.com/posts",
+  baseURL: "https://dummyjson.com",
   headers: {
     "Content-Type": "application/json",
   },
